@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Search App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Pokémon Search App</h1>
+        </header>
+        <section class="search-section">
+            <input type="text" id="search-input" placeholder="Enter Pokémon name or ID" class="search-input" required>
+            <button id="search-button" class="search-button">Search</button>
+        </section>
+        <section class="pokemon-details">
+            <div class="pokemon-image">
+                <!-- Pokémon Image will go here -->
+            </div>
+            <div class="pokemon-info">
+                <h2 class="pokemon-name">Name: <span id="pokemon-name">--</span></h2>
+                <p class="pokemon-id">ID: <span id="pokemon-id">--</span></p>
+                <p class="pokemon-weight">Weight: <span id="weight">--</span></p>
+                <p class="pokemon-height">Height: <span id="height">--</span></p>
+                <p class="pokemon-types">Type: <span id="types">--</span></p>
+            </div>
+        </section>
+        <section class="pokemon-stats">
+            <h3>Base Stats</h3>
+            <div class="stat">
+                <label>HP:</label>
+                <div class="progress-bar"><div id="hp" class="progress" style="width: 50%;"></div></div>
+            </div>
+            <div class="stat">
+                <label>Attack:</label>
+                <div class="progress-bar"><div id="attack" class="progress" style="width: 60%;"></div></div>
+            </div>
+            <div class="stat">
+                <label>Defense:</label>
+                <div class="progress-bar"><div id="defense" class="progress" style="width: 70%;"></div></div>
+            </div>
+            <div class="stat">
+                <label>Sp. Attack:</label>
+                <div class="progress-bar"><div id="special-attack" class="progress" style="width: 80%;"></div></div>
+            </div>
+            <div class="stat">
+                <label>Sp. Defense:</label>
+                <div class="progress-bar"><div id="special-defense" class="progress" style="width: 90%;"></div></div>
+            </div>
+            <div class="stat">
+                <label>Speed:</label>
+                <div class="progress-bar"><div id="speed" class="progress" style="width: 40%;"></div></div>
+            </div>
+        </section>
+    </div>
+    <script src='script.js'rel='script'></script>
+</body>
+</html>
