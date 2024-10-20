@@ -17,8 +17,9 @@ const getPokeInfo = async ()=>
 {
     try{
         const pokeNameOrId = inputElement.value.toLowerCase();
-        const response = await fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${pokeNameOrId}`);
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokeNameOrId}`);
         const data = await response.json();
+        console.log(data);
         //Setting the Pokemon Info
         pokeName.textContent = `${data.name.toUpperCase()}`;
         pokeId.textContent = `#${data.id}`;
@@ -26,7 +27,7 @@ const getPokeInfo = async ()=>
         pokeHeight.textContent = `${data.height}`;
         //Type of Pokemon
         pokeType.innerHTML = data.types
-        .map(obj => <span class="type ${obj.type.name}">${obj.type.name.toUpperCase()}</span>)
+        .map(obj => `<span class="type ${obj.type.name}">${obj.type.name.toUpperCase()}</span>`)
         .join(',');
         pokeImg.innerHTML = 
         `<img id="sprite" src="${data.sprites.front_default}" alt="${data.name} front default sprite">`;
