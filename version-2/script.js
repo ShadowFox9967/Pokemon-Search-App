@@ -17,7 +17,7 @@ const getPokeInfo = async () => {
     try {
         const pokeNameOrId = inputElement.value.toLowerCase();
         const response = await fetch(
-            `https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${pokeNameOrId}`
+            `https://pokeapi.co/api/v2/pokemon/${pokeNameOrId}`
         );
         const data = await response.json();
         // Setting the Pokémon Info
